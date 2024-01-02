@@ -7,7 +7,7 @@ import math
 import gc
 
 numberOfLeds = 16
-ledPin = Pin(4, Pin.OUT)  # pin 4 is also called D2
+ledPin = Pin(2, Pin.OUT)  # pin 2 is also called D4
 leds = NeoPixel(ledPin, numberOfLeds) 
 
 # HSV color values to RGB used by the LEDs. See https://en.wikipedia.org/wiki/HSL_and_HSV
@@ -44,13 +44,11 @@ def clear():
 
 currentH = 0.0
 currentS = 1.0
-currentV = 0.2
+currentV = 0.8 # aka brightness
 
 def showCurrent():
     print(f"{currentH} {currentS} {currentV}")
     setAllTo(toRgb(currentH, currentS, currentV))
-
-setAllTo(255,0,0)
 
 while True:
     currentH += 2.0
