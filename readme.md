@@ -12,3 +12,21 @@ To build your own, please refer to the PDF or PPTX files.
  - Any random LED strip with WS2812 LEDs @ 5V, for example, https://www.amazon.de/dp/B088BB8WTZ.
     - Strips with 30 LEDs per meter are an ideal fit for this project.
  - Some short cables
+
+ # Micropython2
+
+ - ESP will connect to local WiFi and serve a minimalistic website for control
+    - if connect not possible after 10 seconds, it will return to rainbow mode
+ - commands:
+    - rot/grün/blau/gelb/pink/lila/weiß/schwarz
+    - regenbogen
+    - blink/stop
+- create a config.txt like
+```python
+ssid=WIFI
+password=WIFIPASSWORD
+kidName=BOB
+```
+
+
+
